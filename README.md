@@ -69,6 +69,8 @@ Active Directory Domain Services was installed and the server was promoted to a 
 Insert screenshot: AD DS role installation
 screenshots/adds-role.png
 
+https://imgur.com/a/3jxzd5l
+
 Insert screenshot: Domain controller promotion wizard
 screenshots/domain-promotion.png
 
