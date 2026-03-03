@@ -51,11 +51,10 @@ The domain controller is configured with two network interfaces:
 
     - Communication with domain-joined clients
 Server network adapter configuration
-screenshots/server-nics.png
+
 <img width="1023" height="770" alt="Windows Server NICs" src="https://github.com/user-attachments/assets/91690208-4f41-44f7-8e7c-dfa439097f18" />
 
 Internal NIC static IP configuration
-screenshots/internal-ip-config.png
 <img width="1024" height="769" alt="Windows Serer Internal NIC config" src="https://github.com/user-attachments/assets/bb824040-ac48-4d84-a526-0b3bf4dbebe9" />
 
 
@@ -69,7 +68,7 @@ screenshots/adds-role.png
 https://imgur.com/a/3jxzd5l
 
 Domain controller promotion wizard
-screenshots/domain-promotion.png
+
 <img width="1032" height="813" alt="DC Promotion" src="https://github.com/user-attachments/assets/bbe71464-8a3c-4dc7-9c64-490777c3ff61" />
 
 
