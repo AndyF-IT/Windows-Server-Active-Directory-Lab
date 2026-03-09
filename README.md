@@ -1,6 +1,7 @@
 # Windows-Server-Active-Directory-Lab
 
 
+
 Overview
 
 This project documents the deployment and configuration of a Windows Server Active Directory environment in a virtual lab. The goal was to simulate a small enterprise network that provides centralized identity management, dynamic IP addressing, internal DNS resolution, and Group Policy–based administration.
@@ -52,10 +53,12 @@ The domain controller is configured with two network interfaces:
     - Communication with domain-joined clients
 Server network adapter configuration
 
-<img width="1023" height="770" alt="Windows Server NICs" src="https://github.com/user-attachments/assets/91690208-4f41-44f7-8e7c-dfa439097f18" />
+<img width="777" height="588" alt="image" src="https://github.com/user-attachments/assets/5b1a6029-ace9-45d8-8a9e-56ef13bf3962" />
+
 
 Internal NIC static IP configuration
-<img width="1024" height="769" alt="Windows Serer Internal NIC config" src="https://github.com/user-attachments/assets/bb824040-ac48-4d84-a526-0b3bf4dbebe9" />
+
+<img width="395" height="451" alt="image" src="https://github.com/user-attachments/assets/d28d9e10-5f91-48e6-b17e-3cafc3d83e64" />
 
 
 ## Active Directory Domain Services Deployment
@@ -68,19 +71,45 @@ screenshots/adds-role.png
 https://imgur.com/a/3jxzd5l
 
 Domain controller promotion wizard
+<details>
+<summary><b>Domain Controller Promotion Process</b></summary>
+<br>
 
-<img width="1032" height="813" alt="DC Promotion" src="https://github.com/user-attachments/assets/bbe71464-8a3c-4dc7-9c64-490777c3ff61" />
+**Step 1 – Promote Server to Domain Controller**
+
+<img src="https://github.com/user-attachments/assets/bbe71464-8a3c-4dc7-9c64-490777c3ff61" width="800"/>
+
+**Step 2 – Configure Forest Root Domain**
+
+<img src="https://github.com/user-attachments/assets/d278a5a0-1380-4554-abc4-225969c0019c" width="800"/>
+
+**Step 3 – Set Domain Controller Password**
+
+<img src="https://github.com/user-attachments/assets/bd4a9b60-68d1-4ddb-b362-58f98f0bfe0c" width="800"/>
+
+**Step 4 - Assign Path**
+
+<img src="https://github.com/user-attachments/assets/d1859c65-ccf9-4fa3-a177-5adad1910594" width="800"/>
+
+**Step 5 - Complete Precheck Before Installation**
+
+<img src="https://github.com/user-attachments/assets/41b14477-bef2-42c7-9303-2ef95feb1676" width="800"/>
+</details>
+
 
 
 ## DNS Configuration
 
-DNS was installed as part of the AD DS deployment and configured to host the Domain.local zone. The domain controller registers the required SRV records, allowing clients to locate authentication and directory services.
+DNS Manager with forward lookup zone
+<img width="968" height="530" alt="image" src="https://github.com/user-attachments/assets/42540950-32a1-49f3-a85b-fdb15f9250ab" />
 
-Insert screenshot: DNS Manager with forward lookup zone
-screenshots/dns-forward-lookup-zone.png
 
-Insert screenshot: SRV records for the domain
-screenshots/dns-srv-records.png
+Active Directory automatically registers Service Location (SRV) records in DNS to allow domain clients to locate essential services such as LDAP, Kerberos authentication, and the Global Catalog.
+
+The screenshot below shows the SRV records created under the `_tcp` folder for the domain controller.
+
+
+<img width="965" height="530" alt="image" src="https://github.com/user-attachments/assets/400222d8-913b-44d3-bd7a-edff2457758e" />
 
 ## DHCP Configuration
 
