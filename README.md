@@ -19,22 +19,8 @@ This project demonstrates hands-on experience with core system administration an
 
 
 ## Lab Environment
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/47251f68-38fb-49ca-b330-b5828b57e9c2" />
 
-Domain Configuration
-
-- Domain name: Domain.local
-
-- Domain controller internal IP address: 172.16.0.1/24
-
-- DNS server on domain controller: 127.0.0.1
-
-DHCP Scope
-
-- Scope range: 172.16.0.100 – 172.16.0.200
-
-- Subnet mask: 255.255.255.0
-
-- DNS server option: 172.16.0.1
 
 ## Network Architecture
 
