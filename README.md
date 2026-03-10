@@ -51,12 +51,12 @@ The domain controller is configured with two network interfaces:
     - DHCP
 
     - Communication with domain-joined clients
-Server network adapter configuration
+Server network adapter configuration:
 
 <img width="777" height="588" alt="image" src="https://github.com/user-attachments/assets/5b1a6029-ace9-45d8-8a9e-56ef13bf3962" />
 
 
-Internal NIC static IP configuration
+Internal NIC static IP configuration:
 
 <img width="395" height="451" alt="image" src="https://github.com/user-attachments/assets/d28d9e10-5f91-48e6-b17e-3cafc3d83e64" />
 
@@ -118,13 +118,17 @@ DHCP was configured on the internal network to dynamically assign IP addresses t
 Scope details:
 
 Address range: 172.16.0.100 – 172.16.0.200
-
+Subnet Mask: /24
+Default Gateway: 192.168.64.9 (External Facing NIC)
 DNS server: 172.16.0.1
 
 Scope authorized in Active Directory
 
 Insert screenshot: DHCP scope configuration
 screenshots/dhcp-scope.png
+<img width="744" height="549" alt="image" src="https://github.com/user-attachments/assets/9a57a0ec-6444-49df-a6ac-88b1c7a5cdd2" />
+<img width="744" height="549" alt="image" src="https://github.com/user-attachments/assets/d77d5c5e-21f0-4922-ae88-7f81b0c186d4" />
+<img width="742" height="544" alt="image" src="https://github.com/user-attachments/assets/cf480dad-be31-4c09-bbf7-fd690db9b65e" />
 
 Insert screenshot: DHCP lease issued to Windows 11 client
 screenshots/dhcp-lease.png
@@ -141,97 +145,3 @@ screenshots/domain-joined.png
 
 Insert screenshot: Domain user sign-in
 screenshots/domain-user-login.png
-
-## Active Directory User Creation with PowerShell
-
-A PowerShell script was used to automate the creation of domain user accounts. This approach reflects real-world administrative practices for bulk provisioning.
-
-The script performed the following tasks:
-
-Created multiple user accounts
-
-Set default passwords
-
-Enabled the accounts
-
-Placed users into the appropriate Organizational Units
-
-Insert screenshot: PowerShell script execution
-screenshots/user-creation-script.png
-
-Insert screenshot: Newly created users in Active Directory Users and Computers
-screenshots/ad-users-created.png
-
-## Organizational Unit Structure
-
-Organizational Units were created to mirror a production-style environment and allow targeted Group Policy deployment.
-
-Example structure:
-
-Domain.local
- └── HR
-      ├── Users
-      ├── Computers
-      └── Groups
-
-Insert screenshot: OU structure in Active Directory
-screenshots/ou-structure.png
-
-## Group Policy Configuration
-
-Group Policy is used to enforce centralized configuration and security settings across domain-joined systems.
-
-Planned and implemented policies include:
-
-Password and account lockout policies
-
-Desktop and user environment restrictions
-
-Network drive mapping
-
-Windows Update configuration
-
-Insert screenshot: Group Policy Management Console
-screenshots/gpmc.png
-
-Insert screenshot: Example GPO settings
-screenshots/gpo-example.png
-
-## Validation and Testing
-
-The following tests were performed to confirm proper functionality:
-
-DHCP address assignment:
-
-Client received an IP within the configured scope
-
-DNS resolution:
-
-nslookup domain.local
-
-Group Policy application:
-
-gpresult /r
-
-Authentication:
-
-Successful login using a domain user account
-
-Insert screenshot: gpresult output
-screenshots/gpresult.png
-
-Skills Demonstrated
-
-Active Directory deployment and administration
-
-DNS and DHCP configuration
-
-Domain join and authentication troubleshooting
-
-PowerShell for administrative automation
-
-Organizational Unit design
-
-Group Policy management
-
-Network segmentation using multiple NICs
