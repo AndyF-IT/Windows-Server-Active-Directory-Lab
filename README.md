@@ -1,21 +1,16 @@
 # Windows-Server-Active-Directory-Lab
 
 
+### Overview
 
-Overview
+This project documents the deployment and configuration of a Windows Server Active Directory environment within a virtual lab. The objective was to simulate a small enterprise network that provides centralized identity management, automated IP address assignment, internal DNS name resolution, and basic domain-based administration.
 
-This project documents the deployment and configuration of a Windows Server Active Directory environment in a virtual lab. The goal was to simulate a small enterprise network that provides centralized identity management, dynamic IP addressing, internal DNS resolution, and Group Policy–based administration.
+The lab environment consists of a Windows Server domain controller configured with dual network interfaces to support both external connectivity and an isolated internal network for domain services. DNS and DHCP services are hosted on the domain controller to provide name resolution and dynamic IP addressing for devices within the network.
 
-The lab environment includes:
+A Windows 11 virtual machine was deployed as a domain client and successfully joined to the Active Directory domain, demonstrating the integration of client systems into a centralized authentication and management environment.
 
-- A Windows Server domain controller with dual network interfaces
-- An internal network for domain services
-- DHCP and DNS hosted on the domain controller
-- A Windows 11 client joined to the domain
-- Automated user creation using PowerShell
-- Organizational Units designed for Group Policy application
+This project highlights hands-on experience configuring core Windows Server infrastructure services commonly used in enterprise environments.
 
-This project demonstrates hands-on experience with core system administration and identity infrastructure tasks.
 
 
 ## Lab Environment
