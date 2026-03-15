@@ -11,11 +11,19 @@ A Windows 11 virtual machine was deployed as a domain client and successfully jo
 
 This project highlights hands-on experience configuring core Windows Server infrastructure services commonly used in enterprise environments.
 
+### Key Technologies Used
+
+* **Windows Server 2022** – Used to deploy and configure the Active Directory Domain Controller and core network services.
+* **Active Directory Domain Services (AD DS)** – Provides centralized authentication, authorization, and identity management for domain users and devices.
+* **DNS (Domain Name System)** – Enables internal name resolution for domain resources and supports Active Directory functionality.
+* **DHCP (Dynamic Host Configuration Protocol)** – Automatically assigns IP addresses and network configuration to client devices within the internal network.
+* **Group Policy** – Provides centralized management of user and computer configurations across the domain environment.
+* **Windows 11** – Configured as a domain-joined client machine to test authentication and domain-based resource access.
+* **Virtualization Platform** – Used to create and manage the virtual machines that simulate an enterprise network environment.
 
 
-## Lab Environment
+### Architecture / Network Diagram
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/47251f68-38fb-49ca-b330-b5828b57e9c2" />
-
 
 ## Network Architecture
 
