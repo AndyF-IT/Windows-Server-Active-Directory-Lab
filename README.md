@@ -118,6 +118,8 @@ screenshots/dhcp-scope.png
 
 Insert screenshot: DHCP lease issued to Windows 11 client
 screenshots/dhcp-lease.png
+<img width="772" height="554" alt="Screenshot 2026-03-15 at 6 45 07 PM" src="https://github.com/user-attachments/assets/349b47d1-94a1-4d6f-93f8-77ec49483b1a" />
+
 
 ## Windows 11 Domain Join
 
@@ -125,9 +127,12 @@ The Windows 11 client was configured to obtain an IP address automatically from 
 
 Insert screenshot: Client IP configuration
 screenshots/windows11-ipconfig.png
+<img width="1036" height="776" alt="Domain Join 1" src="https://github.com/user-attachments/assets/f0f77b8a-efdb-4685-948f-c0889a0aef52" />
 
 Insert screenshot: Domain join confirmation
 screenshots/domain-joined.png
+<img width="1021" height="771" alt="Domain Join 3" src="https://github.com/user-attachments/assets/44bd97d7-f532-4c4b-87b5-9d9c8fffe12f" />
 
 Insert screenshot: Domain user sign-in
 screenshots/domain-user-login.png
+<img width="987" height="511" alt="Screenshot 2026-03-15 at 6 46 44 PM" src="https://github.com/user-attachments/assets/c27fcccf-6e6a-4e09-99fc-48d49bd74c29" />
