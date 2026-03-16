@@ -25,7 +25,7 @@ This project highlights hands-on experience configuring core Windows Server infr
 ### Architecture / Network Diagram
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/47251f68-38fb-49ca-b330-b5828b57e9c2" />
 
-## Network Architecture
+## NIC Configuration
 
 The domain controller is configured with two network interfaces:
 
