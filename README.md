@@ -177,6 +177,7 @@ The Windows 11 client was configured to obtain an IP address automatically from 
 **Step 1 - Set Client Machines DNS as the Domain Controller's IP address**
 
 <img width="440" height="509" alt="image" src="https://github.com/user-attachments/assets/2f25c630-530c-448a-a9a6-c7b636ae3e79" />
+<br>
 
 **Step 2 - Settings -> System -> Domain or Workgroup -> Change**
 
