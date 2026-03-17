@@ -9,15 +9,12 @@ The lab environment consists of a Windows Server domain controller configured wi
 
 A Windows 11 virtual machine was deployed as a domain client and successfully joined to the Active Directory domain, demonstrating the integration of client systems into a centralized authentication and management environment.
 
-This project highlights hands-on experience configuring core Windows Server infrastructure services commonly used in enterprise environments.
-
 ### Key Technologies Used
 
 * **Windows Server 2022** – Used to deploy and configure the Active Directory Domain Controller and core network services.
 * **Active Directory Domain Services (AD DS)** – Provides centralized authentication, authorization, and identity management for domain users and devices.
 * **DNS (Domain Name System)** – Enables internal name resolution for domain resources and supports Active Directory functionality.
 * **DHCP (Dynamic Host Configuration Protocol)** – Automatically assigns IP addresses and network configuration to client devices within the internal network.
-* **Group Policy** – Provides centralized management of user and computer configurations across the domain environment.
 * **Windows 11** – Configured as a domain-joined client machine to test authentication and domain-based resource access.
 * **UTM Virtualization Platform** – Used to create and manage the virtual machines that simulate an enterprise network environment.
 
