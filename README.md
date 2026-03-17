@@ -35,7 +35,7 @@ The domain controller is configured with two network interfaces:
 
 2. Internal NIC:
 
-    - IP set statically since it will be used to configure domain features
+    - Gets static IP since it will be used to configure domain features
 
 ### Server network adapter configuration:
 
@@ -56,14 +56,39 @@ The domain controller is configured with two network interfaces:
 
 ## Active Directory Domain Services Deployment
 
-Active Directory Domain Services was installed and the server was promoted to a domain controller. A new forest was created using the domain name Domain.local.
+Active Directory Domain Services was installed and the server was promoted to a domain controller. A new forest was created using the domain name Domain.local. The following 2 drop-downs document the process:
 
-Insert screenshot: AD DS role installation
-screenshots/adds-role.png
+<details>
+<summary><b>Active Directory Domain Services Role Installation</b></summary>
+<br>
 
-https://imgur.com/a/3jxzd5l
+**Step 1 – Server Manager -> Manage -> Add Roles and Features**
 
-Domain controller promotion wizard
+<img width="1025" height="728" alt="Screenshot 2026-03-16 at 9 04 41 PM" src="https://github.com/user-attachments/assets/5334a634-e708-4aa1-820c-1e8cec2af73f" />
+
+**Step 2 – Choose Role/Feature Based INstallation**
+
+<img width="787" height="560" alt="Screenshot 2026-03-16 at 9 05 09 PM" src="https://github.com/user-attachments/assets/769d199e-53eb-4f6a-9e2f-a4de4f8968c3" />
+
+**Step 3 – Select Server to install roles and features on**
+
+<img width="843" height="603" alt="image" src="https://github.com/user-attachments/assets/62de7cce-3c78-442b-9847-464bbfd7b0e9" />
+
+**Step 4 - Select Active Directory Domain Services**
+
+<img width="786" height="559" alt="Screenshot 2026-03-16 at 9 06 30 PM" src="https://github.com/user-attachments/assets/e21f724a-8c35-4885-89f3-b1caa6024bbb" />
+
+**Step 5 - Add Required Features for AD DS**
+
+<img width="448" height="466" alt="image" src="https://github.com/user-attachments/assets/02e5cbb6-c91a-492c-bcce-4a0ed98ff45c" />
+
+**Step 6 - Install the roles, services, and features**
+
+<img width="843" height="599" alt="image" src="https://github.com/user-attachments/assets/df5e9545-2025-4fcb-89cf-8420f96912c5" />
+
+
+</details>
+
 <details>
 <summary><b>Domain Controller Promotion Process</b></summary>
 <br>
@@ -88,7 +113,6 @@ Domain controller promotion wizard
 
 <img src="https://github.com/user-attachments/assets/41b14477-bef2-42c7-9303-2ef95feb1676" width="800"/>
 </details>
-
 
 
 ## DNS Configuration
