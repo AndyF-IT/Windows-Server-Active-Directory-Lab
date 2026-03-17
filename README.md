@@ -19,7 +19,7 @@ This project highlights hands-on experience configuring core Windows Server infr
 * **DHCP (Dynamic Host Configuration Protocol)** – Automatically assigns IP addresses and network configuration to client devices within the internal network.
 * **Group Policy** – Provides centralized management of user and computer configurations across the domain environment.
 * **Windows 11** – Configured as a domain-joined client machine to test authentication and domain-based resource access.
-* **Virtualization Platform** – Used to create and manage the virtual machines that simulate an enterprise network environment.
+* **UTM Virtualization Platform** – Used to create and manage the virtual machines that simulate an enterprise network environment.
 
 
 ### Architecture / Network Diagram
@@ -29,26 +29,30 @@ This project highlights hands-on experience configuring core Windows Server infr
 
 The domain controller is configured with two network interfaces:
 
-1. External NIC: Provides internet access for the server.
+1. External NIC: 
+ 
+    - Gets IP configuration settings from home's internet service provider (DHCP)
 
-2. Internal NIC: Dedicated to the domain environment and used for:
+2. Internal NIC:
 
-    - Active Directory services
+    - IP set statically since it will be used to configure domain features
 
-    - DNS
+### Server network adapter configuration:
 
-    - DHCP
+<p align="center">
+  <img width="777" height="588" alt="image" src="https://github.com/user-attachments/assets/5b1a6029-ace9-45d8-8a9e-56ef13bf3962" />
+  <br>
+  <em>Dual network interface configuration showing external and internal adapters.The first adapter connects to the isolalted internal network used for the Active Directory Lab environment, while the second adapter connected to the external network to provide internet connectivity.</em>
+</p>
 
-    - Communication with domain-joined clients
-Server network adapter configuration:
 
-<img width="777" height="588" alt="image" src="https://github.com/user-attachments/assets/5b1a6029-ace9-45d8-8a9e-56ef13bf3962" />
+### Internal NIC Settings:
 
-
-Internal NIC static IP configuration:
-
-<img width="395" height="451" alt="image" src="https://github.com/user-attachments/assets/d28d9e10-5f91-48e6-b17e-3cafc3d83e64" />
-
+<p align="center">
+  <img width="395" height="451" alt="image" src="https://github.com/user-attachments/assets/d28d9e10-5f91-48e6-b17e-3cafc3d83e64" />
+  <br>
+  <em>This screenshot displays the configuration of the internal network adapter. The interface is assigned a static IP address and is used to host core domain services such as Active Directory, DNS, and DHCP. Client machines connected to the internal network communicate with the domain controller through this interface.</em>
+</p>
 
 ## Active Directory Domain Services Deployment
 
@@ -113,29 +117,28 @@ DNS server: 172.16.0.1
 
 Scope authorized in Active Directory
 
-Insert screenshot: DHCP scope configuration
-screenshots/dhcp-scope.png
-<img width="744" height="549" alt="image" src="https://github.com/user-attachments/assets/9a57a0ec-6444-49df-a6ac-88b1c7a5cdd2" />
+DHCP scope configuration
+
 <img width="744" height="549" alt="image" src="https://github.com/user-attachments/assets/d77d5c5e-21f0-4922-ae88-7f81b0c186d4" />
 <img width="742" height="544" alt="image" src="https://github.com/user-attachments/assets/cf480dad-be31-4c09-bbf7-fd690db9b65e" />
 
-Insert screenshot: DHCP lease issued to Windows 11 client
-screenshots/dhcp-lease.png
-<img width="772" height="554" alt="Screenshot 2026-03-15 at 6 45 07 PM" src="https://github.com/user-attachments/assets/349b47d1-94a1-4d6f-93f8-77ec49483b1a" />
+DHCP lease issued to Windows 11 client
 
+
+<img width="772" height="554" alt="Screenshot 2026-03-15 at 6 45 07 PM" src="https://github.com/user-attachments/assets/349b47d1-94a1-4d6f-93f8-77ec49483b1a" />
 
 ## Windows 11 Domain Join
 
 The Windows 11 client was configured to obtain an IP address automatically from DHCP and use the domain controller for DNS. After connectivity and name resolution were verified, the machine was successfully joined to the Domain.local domain.
 
-Insert screenshot: Client IP configuration
-screenshots/windows11-ipconfig.png
+Client IP configuration
+
 <img width="1036" height="776" alt="Domain Join 1" src="https://github.com/user-attachments/assets/f0f77b8a-efdb-4685-948f-c0889a0aef52" />
 
-Insert screenshot: Domain join confirmation
-screenshots/domain-joined.png
+Domain join confirmation
+
 <img width="1021" height="771" alt="Domain Join 3" src="https://github.com/user-attachments/assets/44bd97d7-f532-4c4b-87b5-9d9c8fffe12f" />
 
-Insert screenshot: Domain user sign-in
-screenshots/domain-user-login.png
+Domain user sign-in
+
 <img width="987" height="511" alt="Screenshot 2026-03-15 at 6 46 44 PM" src="https://github.com/user-attachments/assets/c27fcccf-6e6a-4e09-99fc-48d49bd74c29" />
