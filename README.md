@@ -138,22 +138,37 @@ DHCP was configured on the internal network to dynamically assign IP addresses t
 
 Scope details:
 
-Address range: 172.16.0.100 – 172.16.0.200
-Subnet Mask: /24
-Default Gateway: 192.168.64.9 (External Facing NIC)
-DNS server: 172.16.0.1
+- Address range: 172.16.0.100 – 172.16.0.200
+- Subnet Mask: /24
+- Default Gateway: 192.168.64.9 (External Facing NIC)
+- DNS server: 172.16.0.1
 
 Scope authorized in Active Directory
 
 DHCP scope configuration
+<p align="center">
+ <img width="755" height="572" alt="image" src="https://github.com/user-attachments/assets/9e23f727-3d6c-4025-968a-6409622c18d0" />
+  <br>
+  <em>This is the DHCP address pool configured for the internal network.</em>
+</p>
 
-<img width="744" height="549" alt="image" src="https://github.com/user-attachments/assets/d77d5c5e-21f0-4922-ae88-7f81b0c186d4" />
-<img width="742" height="544" alt="image" src="https://github.com/user-attachments/assets/cf480dad-be31-4c09-bbf7-fd690db9b65e" />
+The scope defines the range of IP addresses that the DHCP server can dynamically assign to client devices within the lab environment. By managing the address pool centrally, the server can automatically provide IP configuration to domain clients without requiring manual network setup.
 
-DHCP lease issued to Windows 11 client
+<p align="center">
+ <img width="753" height="568" alt="image" src="https://github.com/user-attachments/assets/8d2f8ae8-15ac-4bad-b7b4-9b7f0b2e0fa5" />
+ <br>
+  <em>The configured DHCP scope options for the internal network.</em>
+</p>
 
+Scope options provide additional network settings to DHCP clients, such as the default gateway, DNS server, and domain name. These settings ensure that domain-joined systems automatically receive the correct network configuration required to communicate with Active Directory services.
 
+<p align="center">
 <img width="772" height="554" alt="Screenshot 2026-03-15 at 6 45 07 PM" src="https://github.com/user-attachments/assets/349b47d1-94a1-4d6f-93f8-77ec49483b1a" />
+  <br>
+  <em>The active DHCP address leases issued by the server.</em>
+</p>
+
+This screenshot shows the active DHCP address leases issued by the server. Each lease represents an IP address that has been dynamically assigned to a client device on the network. Viewing DHCP leases allows adminis to verify that clients are successfully receiving network configurations and connecting to the domain environment.
 
 ## Windows 11 Domain Join
 
