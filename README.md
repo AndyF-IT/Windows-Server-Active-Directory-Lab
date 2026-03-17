@@ -174,14 +174,23 @@ This screenshot shows the active DHCP address leases issued by the server. Each 
 
 The Windows 11 client was configured to obtain an IP address automatically from DHCP and use the domain controller for DNS. After connectivity and name resolution were verified, the machine was successfully joined to the Domain.local domain.
 
-Client IP configuration
+**Step 1 - Set Client Machines DNS as the Domain Controller's IP address**
 
-<img width="1036" height="776" alt="Domain Join 1" src="https://github.com/user-attachments/assets/f0f77b8a-efdb-4685-948f-c0889a0aef52" />
+<img width="440" height="509" alt="image" src="https://github.com/user-attachments/assets/2f25c630-530c-448a-a9a6-c7b636ae3e79" />
 
-Domain join confirmation
+**Step 2 - Settings -> System -> Domain or Workgroup -> Change**
 
+1. <br>
+   <img width="921" height="624" alt="Screenshot 2026-03-16 at 11 36 15 PM" src="https://github.com/user-attachments/assets/85c13a86-f0d1-434b-bdbc-490644ebd035" />
+
+2. <br>
+    <img width="411" height="465" alt="Screenshot 2026-03-16 at 11 36 32 PM" src="https://github.com/user-attachments/assets/71c0b761-e6a6-464d-89c8-d0e023b560e0" />
+    
+3. <br>
+    <img width="411" height="465" alt="image" src="https://github.com/user-attachments/assets/2542fc77-5f41-48dd-a07f-473d8c1d91a7" />
+
+**Step 3- Join Domain and Restart PC**
 <img width="1021" height="771" alt="Domain Join 3" src="https://github.com/user-attachments/assets/44bd97d7-f532-4c4b-87b5-9d9c8fffe12f" />
 
-Domain user sign-in
-
-<img width="987" height="511" alt="Screenshot 2026-03-15 at 6 46 44 PM" src="https://github.com/user-attachments/assets/c27fcccf-6e6a-4e09-99fc-48d49bd74c29" />
+**Step 4 - Verify IP settings w/ ipconfig command**
+<img width="1111" height="627" alt="image" src="https://github.com/user-attachments/assets/464e868b-20ba-4e68-ae84-14b167d54cf1" />
