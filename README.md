@@ -116,17 +116,21 @@ Active Directory Domain Services was installed and the server was promoted to a 
 
 
 ## DNS Configuration
-
-DNS Manager with forward lookup zone
+<p align="center">
 <img width="968" height="530" alt="image" src="https://github.com/user-attachments/assets/42540950-32a1-49f3-a85b-fdb15f9250ab" />
+  <br>
+  <em>This screenshot shows the Forward Lookup Zone configured in DNS Manager for the domain.</em>
+</p>
 
+The zone contains DNS records that map hostnames to IP addresses, allowing devices within the network to locate domain resources such as the domain controller and other services. In an Active Directory environment, the DNS zone is typically integrated with Active Directory, enabling automatic record registration and replication across domain controllers.
 
-Active Directory automatically registers Service Location (SRV) records in DNS to allow domain clients to locate essential services such as LDAP, Kerberos authentication, and the Global Catalog.
+<p align="center">
+ <img width="965" height="530" alt="image" src="https://github.com/user-attachments/assets/400222d8-913b-44d3-bd7a-edff2457758e" />
+  <br>
+  <em>This screenshot shows the Service (SRV) records located in the _tcp folder of the domain's DNS zone.</em>
+</p>
 
-The screenshot below shows the SRV records created under the `_tcp` folder for the domain controller.
-
-
-<img width="965" height="530" alt="image" src="https://github.com/user-attachments/assets/400222d8-913b-44d3-bd7a-edff2457758e" />
+These records are automatically created by Active Directory and are used by domain clients to locate critical services such as domain controllers, Kerberos authentication servers, and LDAP services. Proper registration of these records is essential for domain authentication and overall Active Directory functionality.
 
 ## DHCP Configuration
 
